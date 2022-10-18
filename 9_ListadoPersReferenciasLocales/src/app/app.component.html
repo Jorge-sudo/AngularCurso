@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="col">
+    <h3>{{titulo}}</h3>
+  </div>
+  <hr/>
+  <!-- Aqui lo que necesitamos es recibir informacion del componente hijo y procesarlo en el componente
+  padre -->
+  <app-formulario
+
+    (personaCreada)="personaAgregada($event)"><!-- Por medio de event banding vamos a monitorear el objeto persona creada -->
+
+
+  </app-formulario>
+
+  <!-- @input = nos sirve para enviar informacion de un componente padre a un componente hijo,
+     @output = nos sirve para enviar informacion de un componente hijo a un componente padre -->
+
+       <!-- COMPONENTE HIJO app-persona-->
+  <!-- para pasar el arreglo de personas a el componente hijo utilizaremos Property Binding
+  con [] tanto persona como el indice -->
+  <app-persona  *ngFor="let personaElemento of personas; let i = index"
+  [persona] = "personaElemento"
+  [indice] = "i" >
+  <!-- Dentro de este componente de tipo persona lo que haremos es iterar los componentes de tipo persona -->
+
+</app-persona>
+
+</div>
+
+
+
+

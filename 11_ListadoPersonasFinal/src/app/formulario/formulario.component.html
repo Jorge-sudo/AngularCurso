@@ -1,0 +1,26 @@
+<form class="item">
+  <!-- Para capturar el texto utilizaremos two banding-->
+  <input
+    type="text"
+    name="nombre"
+    id="nombre"
+    placeholder="Nombre"
+    [(ngModel)]="nombreInput"
+  />
+
+  <!-- Para capturar el texto utilizaremos two banding-->
+  <input
+    type="text"
+    name="apellido"
+    id="apellido"
+    placeholder="Apellido"
+    [(ngModel)]="apellidoInput"
+  />
+  <!-- LLamaremos una referencia local envez de two banding la diferencia es :
+    two banding hace referencia a una variable en el archivo.ts y la referencia local solamente enviaremos info
+    desde la plantilla a nuestro componente con #-->
+
+  <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
+    +
+  </button>
+</form>

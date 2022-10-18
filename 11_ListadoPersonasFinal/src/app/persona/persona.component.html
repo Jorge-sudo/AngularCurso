@@ -1,0 +1,13 @@
+<div class="item">
+
+  <!-- Este boton es para el ejemplo de como podemos enviar informacion entre componentes
+        con servicios en este caso del servicio de personas  -->
+  <input type="checkbox" (click)="emitirSaludo()" />
+
+  <!-- ngFor utilizaremos para iterar las personas,
+      el objeto persona almacerana cada objeto  -->
+  
+    <!-- Definimos una variable contador index es necesario-->
+    <!-- Accedemos al nombre y apellido del objeto personas con interpolacion-->
+  <p>{{ indice + 1 }}:{{persona.nombre}} {{persona.apellido}}</p>
+</div>

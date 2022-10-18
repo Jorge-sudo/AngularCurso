@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <!-- ngFor utilizaremos para iterar las personas,
+      el objeto persona almacerana cada objeto  -->
+      <div><!-- Definimos una variable contador index es necesario-->
+        <!-- Accedemos al nombre y apellido del objeto personas con interpolacion-->
+        {{indice+1}}: Nombre: {{persona.nombre}}, Apellido: {{persona.apellido}}
+
+        <!-- Este boton es para el ejemplo de como podemos enviar informacion entre componentes
+        con servicios en este caso del servicio de personas  -->
+        <button type="submit" class="btn btn-info" (click)="emitirSaludo()">
+          Editar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

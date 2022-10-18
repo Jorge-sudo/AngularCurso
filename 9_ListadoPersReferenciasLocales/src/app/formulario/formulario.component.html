@@ -1,0 +1,25 @@
+<form  class="form-row">
+  <div class="form-group col-md-2">
+    <label for="nombre" class="ocultar">Nombre</label>
+    <!-- Para capturar el texto utilizaremos two banding-->
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+        class="form-control" #nombreInput />
+  </div>
+  <br/>
+  <div class="form-group col-md-2">
+    <label for="apellido" class="ocultar">Apellido</label>
+    <!-- Para capturar el texto utilizaremos two banding-->
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido"
+        class="form-control" #apellidoInput />
+    <!-- LLamaremos una referencia local envez de two banding la diferencia es :
+    two banding hace referencia a una variable en el archivo.ts y la referencia local solamente enviaremos info
+    desde la plantilla a nuestro componente con #-->
+  </div>
+  <br/>
+  <div class="col">
+    <button type="submit" class="btn btn-primary" (click) = "agregarPersona(nombreInput, apellidoInput)" >
+      Agregar
+    </button>
+  </div>
+
+</form>

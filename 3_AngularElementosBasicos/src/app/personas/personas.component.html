@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Personas</h1>
+      <!-- Property Binding en Angular es un concepto donde podemos controlar cuando un boton
+      aparezca o desaparezca de manera dinamica -disable=deshabilita el boton
+      para aplicar esto debemos poner el elemento HTML en [] asi angular reconocera y se podra asociar
+      a un atributo de la clase asociamos con un =nombreatributo a asociar -->
+      <button class="btn btn-primary" [disabled]='deshabilitar' (click)='agregarPersona()' >
+        <!-- Event binding = nos permite escuchar los eventos de nuestros elementos HTML todos los eventos
+        lo que haremos es capturar el evento cel click y mostrar el mensaje persona agregada -->
+        Agregar Persona
+      </button>
+
+      <p>{{mensaje}}</p>
+
+      <app-persona></app-persona>
+
+      <label>Titulo Persona</label>
+
+      <!-- En este caso capturaremos la informacion de este input text con
+        $event = en esta variable capturaremos la informacion que escribimos en el input text-->
+      <input type="text" class="form-control"
+        (input)='modificarTitulo($event)' />
+      {{titulo}}
+      
+      <br/>
+      <br/>
+
+      <!-- [] = properter banding y () = event banding y la convinacion esta abajo-->
+
+      <!-- aplicaremos otro input para Two way binding bind = enlazar,
+        enlaza la plantilla HTML con el componente de Angula -->
+      <input type="text" class="form-control"
+        [(ngModel)]='texto' /> <!-- Para manegar two way binding hay que agregar ngModel
+        y con esto ya no necesitamos agregar un metodo para que la variable se cambie como en el
+      anterior input-->
+
+      <!-- Este texto se puede modificar tanto de input como tanto en la variable texto del componente
+      de los 2 lados-->
+      {{texto}}
+
+    </div>
+  </div>
+</div>
+
+

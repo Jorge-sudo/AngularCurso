@@ -1,0 +1,22 @@
+<form  class="form-row">
+  <div class="form-group col-md-2">
+    <label for="nombre" class="ocultar">Nombre</label>
+    <!-- Para capturar el texto utilizaremos two banding-->
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+        class="form-control" [(ngModel)] = "nombreInput"/>
+  </div>
+  <br/>
+  <div class="form-group col-md-2">
+    <label for="apellido" class="ocultar">Apellido</label>
+    <!-- Para capturar el texto utilizaremos two banding-->
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido"
+        class="form-control" [(ngModel)] = "apellidoInput"/>
+  </div>
+  <br/>
+  <div class="col">
+    <button type="submit" class="btn btn-primary" (click) = "agregarPersona()" >
+      Agregar
+    </button>
+  </div>
+
+</form>

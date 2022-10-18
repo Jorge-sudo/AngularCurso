@@ -1,0 +1,15 @@
+<p>
+  Nombre: {{getNombre()}}
+  Apellido: {{apellido}}
+  Edad: {{edad}}
+</p>
+
+ <!-- interpolacion ejemplo -->
+
+ <!-- El keyup es un evento cada vez que presionemos una tecla se llamara este div -->
+ <div (keyup) = '0' >
+  <label>Repetidor: </label>
+    <!-- Al input le agregaremos un nombre con #-->
+    <input #entrada />
+    {{entrada.value}}
+ </div>
